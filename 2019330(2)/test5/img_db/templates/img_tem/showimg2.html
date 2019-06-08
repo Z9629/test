@@ -1,0 +1,9 @@
+<!--{% for img in imgs %}-->
+<!--#判断，只取最后一张图片-->
+{% if forloop.last %}
+<input value="{{img.img.url}}"></input>
+<!--<img src="{{ content }}" />-->
+<!--{%endif%}-->
+<!--<img src="{{ content }}" />-->
+<hr>
+<!--{% endfor %}-->

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <script>
+    $("#ip").change(function (){
+     var x = $("#imagePreview").text($("#ip").val());
+     alert(x);
+    <!--var c = $("#showlogo").attr("src",this.src);-->
+    <!--alert(c);-->
+    })
+
+
+    </script>
+</head>
+<body>
+<form action="b.html" name="f" method="post" >
+    <input id="ip" name="photo" type="file" onchange="test()">
+    <div id="imagePreview">
+    </div>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

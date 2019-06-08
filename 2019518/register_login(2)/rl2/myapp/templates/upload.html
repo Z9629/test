@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="margin:30px ;text-align:center">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    <input type="file" name="img1" >
+        <br>
+    <input type="text" name="name1">
+        <br>
+    <input type="text" name="href1">
+        <input type="submit">
+    </form>
+</div>
+
+<!--<div>-->
+    <!--{%for i in list%}-->
+    <!--{{i.pic_lj}}-->
+    <!--<a href= {{i.pic_img}}></a>-->
+    <!--{%endfor%}-->
+<!--</div>-->
+<!--<div style="margin:30px ;text-align:center" >-->
+            <!--<select id="size">-->
+                <!--<option value="200" selected="">生成二维码尺寸 200px</option>-->
+                <!--<option value="300">生成二维码尺寸 300px</option>-->
+                <!--<option value="400">生成二维码尺寸 400px</option>-->
+                <!--<option value="500">生成二维码尺寸 500px</option>-->
+                <!--<option value="600">生成二维码尺寸 600px</option>-->
+            <!--</select>-->
+        <!--</div>-->
+</body>
+</html>

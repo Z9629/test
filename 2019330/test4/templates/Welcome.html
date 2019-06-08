@@ -1,0 +1,28 @@
+<!--<!DOCTYPE HTML>-->
+<!--<html>-->
+
+<!--<head>-->
+    <!--<title> welcome </title>-->
+<!--</head>-->
+<!--<body >-->
+<!--<h1>nihao</h1>-->
+        <!--{% for i in image %}-->
+        <!--<img src="{{MEDIA_URL}}{{i.img}}">-->
+        <!--{% endfor %}-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+<body>
+<form action="/upload/" method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+    上传：
+    <input type="file" name="picture">
+    <input type="submit" value="上传">
+
+</form>
+
+
+</body>

@@ -1,0 +1,412 @@
+<!--<meta charset="UTF-8">-->
+<!--<style>-->
+	<!--.nav-tabs .active a {-->
+		<!--font-weight: 700;-->
+	<!--}-->
+
+	<!--#color-show {-->
+		<!--background: #000;-->
+		<!--display: inline-block;-->
+		<!--height: 18px;-->
+		<!--width: 18px;-->
+		<!--margin: 0 2px;-->
+	<!--}-->
+
+	<!--#qrcode-box {-->
+		<!--margin: 1em 0;-->
+		<!--display: inline-block;-->
+		<!--box-shadow: #AAA 1px 1px 3px;-->
+	<!--}-->
+<!--</style>-->
+<!--<link href="https://cdn.staticfile.org/bootstrap-colorpicker/2.3.6/css/bootstrap-colorpicker.min.css" rel="stylesheet">-->
+<!--<script src="https://cdn.staticfile.org/bootstrap-colorpicker/2.3.6/js/bootstrap-colorpicker.min.js"></script>-->
+
+<!--<script src="https://static.gaitubao.net/js/qrcode16.js"></script>-->
+
+<!--<div class="colorpicker dropdown-menu colorpicker-with-alpha colorpicker-right colorpicker-visible" style="top: 809px; left: 299px;">-->
+    <!--<div class="colorpicker-saturation" style="background-color: rgb(0, 255, 255);">-->
+        <!--<i style="left: 69px; top: 39px;"><b></b></i>-->
+    <!--</div>-->
+    <!--<div class="colorpicker-hue"><i style="top: 50px; left: 0px;"></i></div>-->
+    <!--<div class="colorpicker-alpha" style="background-color: rgb(48, 156, 156);"><i style="top: 0px;"></i></div>-->
+    <!--<div class="colorpicker-color" style="background-color: rgb(48, 156, 156);">-->
+        <!--<div style="background-color: rgb(48, 156, 156);"></div></div>-->
+    <!--<div class="colorpicker-selectors"></div></div>-->
+<!--<button id="cp4" class="btn btn-default colorpicker-element">-->
+<!--<span id="color-show">&nbsp;</span>&nbsp;选择颜色</button>-->
+
+
+<!--<div class="col-md-3">-->
+							<!--<select id="size" class="form-control">-->
+								<!--<option value="100">图片尺寸 100px</option>-->
+								<!--<option value="200" selected="">图片尺寸 200px</option>-->
+								<!--<option value="400">图片尺寸 400px</option>-->
+								<!--<option value="600">图片尺寸 600px</option>-->
+								<!--<option value="800">图片尺寸 800px</option>-->
+							<!--</select>-->
+						<!--</div>-->
+
+<!--<div class="col-md-3">-->
+							<!--<select id="marign" class="form-control">-->
+								<!--<option value="0">边框大小 0</option>-->
+								<!--<option value="1" selected="">边框大小 1</option>-->
+								<!--<option value="2">边框大小 2</option>-->
+								<!--<option value="3">边框大小 3</option>-->
+								<!--<option value="4">边框大小 4</option>-->
+								<!--<option value="5">边框大小 5</option>-->
+							<!--</select>-->
+						<!--</div>-->
+
+
+
+
+<div id="iColorPicker" style="border: 1px solid rgb(204, 204, 204); padding: 5px; color: rgb(255, 255, 255); z-index: 9999; top: 405px; left: 302px; position: absolute; display: block; background: rgb(51, 51, 51);"><table class="pickerTable" id="pickerTable0" style="border-collapse: collapse;">
+<thead id="hexSection0">
+<tr>
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(255, 0, 0);" hx="ff0000">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(255, 255, 0);" hx="ffff00">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 255, 0);" hx="00ff00">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 255, 255);" hx="00ffff">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 0, 255);" hx="0000ff">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(255, 0, 255);" hx="ff00ff">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(255, 255, 255);" hx="ffffff">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(235, 235, 235);" hx="ebebeb">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(225, 225, 225);" hx="e1e1e1">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(215, 215, 215);" hx="d7d7d7">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(204, 204, 204);" hx="cccccc">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(194, 194, 194);" hx="c2c2c2">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(183, 183, 183);" hx="b7b7b7">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(172, 172, 172);" hx="acacac">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(160, 160, 160);" hx="a0a0a0">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(149, 149, 149);" hx="959595">
+</td>
+</tr>
+<tr>
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(238, 29, 36);" hx="ee1d24">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(255, 241, 0);" hx="fff100">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 166, 80);" hx="00a650">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 174, 239);" hx="00aeef">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(47, 49, 146);" hx="2f3192">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(237, 0, 140);" hx="ed008c">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(137, 137, 137);" hx="898989">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(125, 125, 125);" hx="7d7d7d">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(112, 112, 112);" hx="707070">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(98, 98, 98);" hx="626262">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(85, 85, 85);" hx="555555">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(70, 70, 70);" hx="464646">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(54, 54, 54);" hx="363636">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(38, 38, 38);" hx="262626">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(17, 17, 17);" hx="111111">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 0, 0);" hx="000000">
+</td>
+</tr>
+<tr>
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(247, 151, 122);" hx="f7977a">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(251, 173, 130);" hx="fbad82">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(253, 198, 140);" hx="fdc68c">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(255, 247, 153);" hx="fff799">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(198, 223, 156);" hx="c6df9c">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(164, 212, 157);" hx="a4d49d">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(129, 202, 157);" hx="81ca9d">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(123, 205, 201);" hx="7bcdc9">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(108, 207, 247);" hx="6ccff7">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(124, 166, 216);" hx="7ca6d8">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(130, 147, 202);" hx="8293ca">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(136, 129, 190);" hx="8881be">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(162, 134, 189);" hx="a286bd">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(188, 140, 191);" hx="bc8cbf">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(244, 155, 193);" hx="f49bc1">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(245, 153, 157);" hx="f5999d">
+</td>
+</tr>
+<tr>
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(241, 108, 77);" hx="f16c4d">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(246, 142, 84);" hx="f68e54">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(251, 175, 90);" hx="fbaf5a">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(255, 244, 103);" hx="fff467">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(172, 211, 114);" hx="acd372">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(125, 196, 115);" hx="7dc473">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(57, 183, 120);" hx="39b778">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(22, 188, 180);" hx="16bcb4">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 191, 243);" hx="00bff3">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(67, 140, 203);" hx="438ccb">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(85, 115, 183);" hx="5573b7">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(94, 92, 167);" hx="5e5ca7">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(133, 95, 168);" hx="855fa8">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(167, 99, 169);" hx="a763a9">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(239, 110, 168);" hx="ef6ea8">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(241, 109, 126);" hx="f16d7e">
+</td>
+</tr>
+<tr>
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(238, 29, 36);" hx="ee1d24">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(241, 101, 34);" hx="f16522">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(247, 148, 29);" hx="f7941d">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(255, 241, 0);" hx="fff100">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(143, 198, 61);" hx="8fc63d">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(55, 180, 74);" hx="37b44a">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 166, 80);" hx="00a650">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 169, 158);" hx="00a99e">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 174, 239);" hx="00aeef">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 114, 188);" hx="0072bc">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 84, 165);" hx="0054a5">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(47, 49, 146);" hx="2f3192">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(101, 44, 145);" hx="652c91">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(145, 39, 143);" hx="91278f">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(237, 0, 140);" hx="ed008c">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(238, 16, 90);" hx="ee105a">
+</td>
+</tr>
+<tr>
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(157, 10, 15);" hx="9d0a0f">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(161, 65, 13);" hx="a1410d">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(163, 98, 9);" hx="a36209">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(171, 160, 0);" hx="aba000">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(88, 133, 40);" hx="588528">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(25, 123, 48);" hx="197b30">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 114, 54);" hx="007236">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 115, 106);" hx="00736a">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 118, 164);" hx="0076a4">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 74, 128);" hx="004a80">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 51, 112);" hx="003370">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(29, 19, 99);" hx="1d1363">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(69, 14, 97);" hx="450e61">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(98, 5, 95);" hx="62055f">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(158, 0, 92);" hx="9e005c">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(157, 0, 57);" hx="9d0039">
+</td>
+</tr>
+<tr>
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(121, 0, 0);" hx="790000">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(123, 48, 0);" hx="7b3000">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(124, 73, 0);" hx="7c4900">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(130, 122, 0);" hx="827a00">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(62, 102, 23);" hx="3e6617">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(4, 95, 32);" hx="045f20">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 88, 36);" hx="005824">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 89, 81);" hx="005951">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 91, 126);" hx="005b7e">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 53, 98);" hx="003562">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(0, 32, 86);" hx="002056">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(12, 0, 75);" hx="0c004b">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(48, 0, 74);" hx="30004a">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(75, 0, 72);" hx="4b0048">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(122, 0, 69);" hx="7a0045">
+</td>
+
+<td style="width: 12px; height: 14px; border: 1px solid rgb(0, 0, 0); cursor: pointer; background: rgb(122, 0, 38);" hx="7a0026">
+</td>
+</tr></thead><tbody>
+<tr>
+<td style="border: 1px solid rgb(0, 0, 0); cursor: pointer; height: 50px; width: 12px; background: rgb(204, 204, 204);" colspan="16" align="center" id="colorPreview"><span style="color:#000000;border:1px solid rgb(0, 0, 0);padding:5px;background-color:#ffffff;font:11px Arial, Helvetica, sans-serif;">#cccccc</span>
+</td>
+</tr></tbody></table><style>#iColorPicker input{margin:2px}</style></div>
+

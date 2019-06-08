@@ -1,0 +1,305 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>{% block title %}base{% endblock %}</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}  />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {% block css %}{% endblock %}
+  </head>
+  <body>
+
+  <style>
+	.center{
+    width:100%;
+        height:100%;
+		position:relative;
+    }
+    .hrurl{
+        width:950px;
+		position:absolute;
+        bottom:10px;
+        left:15%;
+        }
+
+    .hrurl a{
+		color:#666;
+		margin-left:2px;
+		margin-right:2px;
+
+		}
+
+
+
+</style>
+<div class="center" >
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav" aria-expanded="false">
+            <span class="sr-only">切换导航条</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">个性二维码生成网站</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="my-nav">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/index/">主页</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              {% if request.session.is_login %}
+                  <li><a href="#">当前在线：{{ request.session.user_name }}</a></li>
+                  <li><a href="/logout/">登出</a></li>
+              {% else %}
+                  <li><a href="/login/">登录</a></li>
+                  <li><a href="/register/">注册</a></li>
+              {% endif %}
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    {% block content %}{% endblock %}
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static 'js/jquery-3.2.1.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+  <script src="{% static  'js/main.css' %}"></script>
+
+
+<div id="container">
+			<div id="list" style="left:0px">
+                {% for i in list %}
+                <a href={{ i.pic_lj }}><img src={{ i.pic_img }}></a>
+                <!--<a href={{ n}}><img src={{ t }}></a>-->
+                {%endfor%}
+				<!--<a href="https://item.taobao.com/item.htm?id=551893868851&ali_trackid=2:mm_14626936_8346309_133778679:1555938496_135_1862207608&spm=a231o.7076277%2Fb.20003.48&pvid=200_11.11.161.106_16578_1555938443799&qq-pf-to=pcqq.c2c"><img src="../media/pic/5.jpg" alt="1"/></a>-->
+
+                <!--<a href="https://item.taobao.com/item.htm?id=538713051844&ali_trackid=2:mm_14626936_8346309_133778679:1555938683_127_1820196226&spm=a231o.7076277%2Fb.20003.32&pvid=200_11.11.161.106_16578_1555938443799&qq-pf-to=pcqq.c2c"><img src="../media/pic/6.jpg" alt="2"/></a>-->
+
+                <!--<a href="https://detail.tmall.com/item.htm?id=587493486502&ali_trackid=2:mm_14626936_8346309_133778679:1555939029_179_1580870392&spm=a231o.7712113/g.1004.1&pvid=200_11.27.75.94_8078_1555938929380&sku_properties=5919063:6536025;122216431:27772"><img src="../media/pic/7.jpg" alt="3"/></a>-->
+
+                <!--<a href="https://detail.tmall.com/item.htm?id=537689688538&ali_trackid=2:mm_14626936_8346309_133778679:1555939125_127_723910542&spm=a231o.7712113%2Fg.1004.1&pvid=200_11.15.168.110_11757_1555939098554"><img src="../media/pic/8.jpg" alt="4"/></a>-->
+
+                <!--<a href="https://uland.taobao.com/coupon/edetail?spm=a231o.7712113%2Fg.1004.1.340146082wMsDS&prepvid=200_11.178.206.127_365_1555939156521&extra=&e=u5%2BpE86CzfwGQASttHIRqXroy%2Bq4zV8EaJDJR8HkMhnbLaGB9uZG%2BtLTz3rY%2Beuv6pyqdhdSgf6YJ5izE9nTJ0fys1mQZ51ADfqEFBOhTczBA8u39xTgw1gUWLbIHhdqWJ63XP%2FV6d5CpDs2n%2F7DdKJ7%2BkHL3AEW&engpvid=100_11.179.213.98_113357_5741555939156543320&pid=mm_14626936_8346309_133778679&clk1=&unid=&source_id=&app_pvid=200_11.178.206.127_365_1555939156521&qq-pf-to=pcqq.c2c"><img src="../media/pic/9.jpg" alt="5"/></a>-->
+			</div>
+			<div id="buttons">
+            	<span index="1" class="on"></span>
+            	<span index="2"></span>
+            	<span index="3"></span>
+            	<span index="4"></span>
+            	<span index="5"></span>
+      	  	</div>
+      	  	<a href="javascript:;" class="arrow" id="prev"><</a>
+        	<a href="javascript:;" class="arrow" id="next">></a>
+		</div>
+
+
+
+<script >
+  window.onload = function() {
+    var list = document.getElementById('list');
+    var prev = document.getElementById('prev');
+    var next = document.getElementById('next');
+    var container = document.getElementById('container');
+    var buttons = document.getElementById('buttons').getElementsByTagName('span');
+	var index = 1;
+
+    function animate(offset) {
+        //获取的是style.left，是相对左边获取距离，所以第一张图后style.left都为负值，
+        //且style.left获取的是字符串，需要用parseInt()取整转化为数字。
+        var newLeft = parseInt(list.style.left) + offset;
+        list.style.left = newLeft + 'px';
+		list.style.transition='300ms ease';
+        if(newLeft < -1180){
+        	list.style.left = 0 + 'px';
+        }
+        if(newLeft > -295){
+        	list.style.left = -1180 + 'px';
+        }
+    }
+	var timer;
+	function autoplay(){
+		timer = setInterval(function(){
+			next.onclick()
+		},3000);
+	}
+	autoplay();
+	function stopplay(){
+		clearInterval(timer);
+	}
+	function showButton(){
+		//清除之前的样式
+		for(let i = 0;i<buttons.length;i++){
+			if(buttons[i].className == 'on'){
+				buttons[i].className = '';
+			}
+		}
+		buttons[index-1].className = 'on';
+	}
+	prev.onclick = function() {
+		index-=1;
+		if(index < 1){
+			index = 5;
+		}
+		showButton();
+    	animate(295);
+    }
+    next.onclick = function() {
+    	index+=1;
+    	if(index > 5){
+    		index = 1;
+    	}
+    	showButton();
+        animate(-295);
+    }
+    for(var i = 0;i<buttons.length;i++){
+    	buttons[i].onclick = function() {
+    		var clickIndex = parseInt(this.getAttribute('index'));
+    		var offset = 295*(index - clickIndex);
+			animate(offset);
+			index = clickIndex;
+			showButton();
+        }
+    }
+    container.onmouseover = stopplay;
+	container.onmouseout = autoplay;
+}
+        </script>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+#container{
+	margin:20px;
+	width: 295px;
+	height: 215px;
+	border: 3px solid #333;
+	overflow: hidden;
+
+	position:absolute;
+     top:150px;
+     left:6px;
+}
+#list{
+	width: 4200px;
+	height: 483px;
+	position: absolute;
+	z-index: 1;
+}
+#list img{
+	float: left;
+	width: 295px;
+	height: 215px;
+}
+#buttons{
+	position: absolute;
+	height: 10px;
+	width: 100px;
+	z-index: 2;
+	bottom: 20px;
+	right: 100px;
+}
+#buttons span {
+       cursor: pointer;
+       float: left;
+       border: 1px solid #fff;
+       border-radius: 50%;
+       height: 10px;
+       width: 10px;
+       margin-right: 5px;
+       background: #E98352;
+}
+#buttons .on {
+       background: #474550;
+}
+.arrow{
+	display: none;
+	cursor: pointer;
+	line-height: 40px;
+	text-align: center;
+	font-size: 30px;
+	width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+    top: 90px;
+    color: #fff;
+	background:#474550 ;
+}
+.arrow:hover {
+    background-color: #E98352;
+}
+#container:hover .arrow {
+    display: block;
+}
+#pre {
+    left: 20px;
+}
+#next {
+    right: 2px;
+}
+
+
+
+
+
+</style>
+
+<div  style="position: fixed; top:25%; right:20px; margin-top:50px">
+<!--<div  style="float:right; vertical-align:middle;margin-top:50px;margin-bottom:20px">-->
+
+    <a href="http://www.zknu.edu.cn/">
+        <img src="/media/pic/300.jpg">
+    </a>
+</div>
+
+
+<div class="hrurl" style="color:red">
+
+    <h3>友情链接</h3>
+
+    <div style=" text-align:left">
+    <span><a href="https://www.tooopen.com/img/87.aspx" target="_blank">素材公社</a>|</span>
+    <span><a href="http://sc.chinaz.com/tupian/beijingtupian.html" rel="external nofollow" target="_blank">站长素材</a>|</span>
+    <span><a href="http://pic.sogou.com/pics?query=%CD%BC%C6%AC%B4%F3%C8%AB&p=40230500&st=255&mode=255&policyType=0" target="_blank">搜狗图片</a>|</span>
+    <span><a href="https://www.ivsky.com/tupian/ziranfengguang/" target="_blank">天堂图片网</a>|</span>
+    <span><a href="http://p.ik123.com/bizhi/fengjing/" target="_blank">深港精品库 </a>|</span>
+    <span><a href="http://www.jj20.com/" target="_blank">娟娟壁纸 </a>|</span>
+    <span><a href="http://pic.5tu.cn/photo/index_photo.html" target="_blank">百图汇素材网  </a>|</span>
+    <span><a href="https://www.cnblogs.com/zhaowei5/" target="_blank">博客  </a></span>
+    </div>
+
+</div>
+</div>
+
+
+
+  </body>
+</html>

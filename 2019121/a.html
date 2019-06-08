@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <title>Title</title>
+<script>
+$("#ip").change(function () {
+var c = $("#imagePreview").text($("photo").val());
+   alert(c);
+   return c;
+
+})
+
+function test(){
+
+    var c = document.getElementById('ip').value();
+    var t = document.getElementById("imagePreview").filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = document.getElementById("ip").value;
+
+
+    var c = document.forms["f"]["photo"].value;
+    alert(t);
+    return t;
+
+    }
+</script>
+<style type="text/css">
+#imagePreview {
+width: 160px;
+height: 120px;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale);
+}
+</style>
+</head>
+
+<body>
+<form action="b.html" name="f" method="post" >
+    <input id="ip" name="photo" type="file" >
+    <div id="imagePreview">
+        <img src=document.forms["f"]["photo"].value>
+        <label >smile</label>
+    </div>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

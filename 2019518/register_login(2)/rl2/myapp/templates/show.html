@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block title %}Show{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div  style="margin:30px ;text-align:center">
+    <div style="margin:30px ;text-align:center">
+    <img src={{ t }}  width="300px"/>
+
+
+</div>
+
+
+<!--<input type="text" value={{t}}>-->
+<a id="download"  download={{n}} href= {{t}} style="margin:30px auto;color:red">
+   <h2> <b>下载
+</b>
+</h2></a>
+
+</div>
+
+
+</body>
+</html>
+{% endblock %}

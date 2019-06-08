@@ -1,0 +1,69 @@
+<!--https://blog.csdn.net/Nick_php/article/details/53696004-->
+<!--<script>-->
+<!--$("#file").change(function(){-->
+    <!--var objUrl = getObjectURL(this.files[0]) ;    -->
+    <!--if (objUrl) {  -->
+        <!--$("#img").attr("src", objUrl) ;  -->
+    <!--}  -->
+<!--}) ;  -->
+<!--//建立一個可存取到该file的url  -->
+<!--function getObjectURL(file) {  -->
+    <!--var url = null ;   -->
+    <!--if (window.createObjectURL!=undefined) { // basic  -->
+        <!--url = window.createObjectURL(file) ;  -->
+    <!--} else if (window.URL!=undefined) { // mozilla(firefox)  -->
+        <!--url = window.URL.createObjectURL(file) ;  -->
+    <!--} else if (window.webkitURL!=undefined) { // webkit or chrome  -->
+        <!--url = window.webkitURL.createObjectURL(file) ;  -->
+    <!--}  -->
+    <!--return url ;  -->
+<!--}-->
+    <!--</script>-->
+<!--<input id="file" name="file" type="file">-->
+<!--<img id="img" name="img" src="">-->
+
+
+<div class="ge_pic_icon_Infor">
+	<img src="images/moren.jpg"/>
+</div>
+<div class="Infor_file">
+	<input type="file" name="uploadPicture" id="file" value="" title="上传照片" onchange="getPhoto(this)"/>
+</div>
+
+<script type="text/javascript">
+    var imgurl = "";
+    function getPhoto(node) {
+        var imgURL = "";
+        try{
+            var file = null;
+            if(node.files && node.files[0] ){
+                file = node.files[0];
+            }else if(node.files && node.files.item(0)) {
+                file = node.files.item(0);
+            }
+            //Firefox 因安全性问题已无法直接通过input[file].value 获取完整的文件路径
+            try{
+                imgURL =  file.getAsDataURL();
+            }catch(e){
+                imgRUL = window.URL.createObjectURL(file);
+            }
+        }catch(e){
+            if (node.files && node.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    imgURL = e.target.result;
+                };
+                reader.readAsDataURL(node.files[0]);
+            }
+        }
+        creatImg(imgRUL);
+        return imgURL;
+    }
+
+    function creatImg(imgRUL){
+        var textHtml = "<img src='"+imgRUL+"'width='414px' height='600px'/>";
+        $(".ge_pic_icon_Infor").html(textHtml);
+    }
+</script>
+
+<!--原文：https://blog.csdn.net/Gentry__/article/details/53378237 -->

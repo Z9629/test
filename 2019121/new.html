@@ -1,0 +1,18 @@
+<script type="text/javascript" src="jquery.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+<input id="upload" type="file">
+<!--<a href="new2.html" target="_blank"><img id="preview" src=""></a>-->
+<img id="preview" src="">
+<script type="text/javascript">
+$('#upload').change(function(){
+    // 获取FileList的第一个元素
+    alert(document.getelementbyid('upload').files[0]);
+    alert("13456698");
+});
+</script>
+<script type="text/javascript">
+var f = document.getelementbyid('upload').files[0];
+var src = window.URL.createObjectURL(f);
+document.getElementById('preview').src = src;
+alert(src);
+</script>

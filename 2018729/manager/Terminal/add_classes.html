@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block css %}
+{% endblock %}
+{% block content %}
+      <meta charset="UTF-8">
+   <h1>添加班级</h1>
+   <form action="/add_classes.html" method="POST">
+       <input type="text" name="caption" />
+       <input type="submit" value="提交"/>{{ msg }}
+   </form>
+{% endblock %}
+{% block js %}
+   <script>
+       $(function () {
+           $('#menu_class').addClass('active');
+                //addClass() 方法向被选元素添加一个或多个类。
+                //该方法不会移除已存在的 class 属性，仅仅添加一个或多个 class 属性。
+                //提示：如需添加多个类，请使用空格分隔类名。
+       });
+   </script>
+{% endblock %}

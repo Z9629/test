@@ -1,0 +1,29 @@
+
+<h1>信息展示</h1>
+
+<table border="1">
+
+    <tr>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>邮箱</td>
+        <td>照片</td>
+    </tr>
+    <!--<img src="">-->
+    {% for i in info_list %}
+
+        <tr>
+            <td>{{ i.username }}</td>
+            <td>{{ i.sex }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.photo }}</td>
+        </tr>
+
+    {% endfor %}
+
+</table>
+<hr>
+<img src= {{ sd }}>
+
+</body>
+</html>

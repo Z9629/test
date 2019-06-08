@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block title %}主页{% endblock %}
+{% block content %}
+
+    {% if request.session.is_login %}
+
+
+<div style="margin:30px ;text-align:center">
+    <h1>你好,{{ request.session.user_name }}！欢迎回来！</h1>
+        <h1>
+            <b>
+        快开始个性二维码的制作吧
+                </b>
+            </h1>
+    <div >
+
+    <!--<img src="../media/img/1.png" width="100%" height="100%" />-->
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+<style>
+#jz{ margin:30px auto; width:600px; height:80px; border:1px solid wight}
+
+
+label{
+            position: relative;
+        }
+        #fileinp{
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+        #btn{
+            margin-right: 5px;
+        }
+        #texts{
+            color: red;
+        }
+
+</style>
+        <div id="jz">
+            <input id="txt" name="txt" class="form-control " style="height:80px"  placeholder="请在此处输入生成二维码内容，暂不支持输入中文。请点击选择文件选择背景图片"></input>
+        </div>
+
+
+
+        <!--<div style="margin:30px ;text-align:center" >-->
+            <!--<select id="size">-->
+                <!--<option value="200" selected="">生成二维码尺寸 200px</option>-->
+                <!--<option value="300">生成二维码尺寸 300px</option>-->
+                <!--<option value="400">生成二维码尺寸 400px</option>-->
+                <!--<option value="500">生成二维码尺寸 500px</option>-->
+                <!--<option value="600">生成二维码尺寸 600px</option>-->
+            <!--</select>-->
+        <!--</div>-->
+
+
+        <div style="margin: 30px 45%;">
+
+<!--<label for="fileinp">-->
+        <!--<input type="button" id="btn" value="点我上传" style="margin:30px ;text-align:center" >-->
+        <!--<input type="file" id="fileinp" name="img">-->
+<!--</label>-->
+<input type="file" name="img">
+        </div>
+
+        <div style="margin:30px auto;text-align:center">
+            <input type="text" id="text" name="text" style="display:None">
+            <input type="submit" value="去看看那个二维码吧"></input>
+        </div>
+
+
+
+</form>
+<script>
+$(document).ready(function(){
+    $("#txt").change(function(){
+        var text = $("#txt").val();
+        $("#text")[0].value = text;
+
+    });
+});
+
+
+
+</script>
+</div>
+</div>
+
+    {% else %}
+<div style="text-align:center">
+    <h1>你尚未登录，只能访问公开内容！</h1>
+    </div>
+    {% endif %}
+{% endblock %}
